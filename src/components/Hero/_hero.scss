@@ -1,0 +1,35 @@
+#hero{
+    min-height: 90rem;
+    height: 100vh;
+    max-height: 120rem;
+    
+    & .container{
+        height: 100%;
+        position: relative;
+
+        & .hero-img{
+            position: absolute;
+            top: 0;
+            right: -28rem;
+            z-index: -1;
+        }
+    }
+
+    & .hero-content{
+        width: 70rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-start;
+
+        & > *{
+            margin: 2rem 0;
+        }
+
+        & p{
+            color: #ABADBF;
+            font-size: 1.6rem;
+        }
+    }
+}
