@@ -6,12 +6,13 @@
 
 .btn,
 .btn-nav a{
-    background: #040610;
+    background: var(--secondary-color);
     font-size: 1.6rem;
     color: #fff;
     padding: 2.3rem 5rem;
     position: relative;
     transition: background .3s ease;
+    font-weight: 700!important;
     
     &:hover{
         background: #020308;
@@ -54,6 +55,9 @@ h1{
 }
 
 h2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4.2rem;
+    color: #fff;
 }
 
 h3{

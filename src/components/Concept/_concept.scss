@@ -1,0 +1,23 @@
+#concept{
+    background: linear-gradient(110deg, #2DC4CE, #435CFE);
+    clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 87%);
+    padding: 15rem 0;
+
+    & .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h2{
+            margin-bottom: 3rem;
+        }
+
+        & p{
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+    }
+}

@@ -31,5 +31,28 @@
             color: #ABADBF;
             font-size: 1.6rem;
         }
+
+        & .hero-btns{
+            display: flex;
+
+            & .eth-btn{
+                background: var(--secondary-color);
+                margin-left: 2rem;
+                padding: 0 2.2rem;
+                display: flex;
+                align-items: center;
+                color: #fff;
+                font-family: 'Archivo Black', sans-serif;
+                transition: background .3s ease;
+
+                & img{
+                    margin-left: 1.3rem;
+                }
+
+                &:hover{
+                    background: #020308;
+                }
+            }
+        }
     }
 }
