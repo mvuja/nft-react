@@ -1,19 +1,14 @@
-.container{
-    padding: 0 4rem;
-    max-width: 138rem;
-    margin: 0 auto;
-}
-
-.btn-nav a{
+.mint-btn{
     background: var(--secondary-color);
+    font-size: 1.6rem;
     color: #fff;
     padding: 2.3rem 5rem;
     position: relative;
-    font-weight: 700!important;
     transition: background .3s ease;
+    font-weight: 700!important;
     
     &:hover{
-        background:#020308;
+        background: #020308;
     }
 
     &:hover::before,
@@ -44,22 +39,4 @@
         border-left: 1px solid #fff;
         transition: width .3s ease;
     }
-}
-
-h1{
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 4.6rem;
-    color: #fff;
-}
-
-h2{
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 4.2rem;
-    color: #fff;
-}
-
-h3{
-}
-
-h4{
 }

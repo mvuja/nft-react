@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import './_benefits.scss';
-import bullet from '../../assets/bullet.png';
-import tick from '../../assets/tick.svg';
-import ethImg from '../../assets/eth.svg';
+import EthBtn from '../SmallComponents/EthBtn/EthBtn.jsx'
+import MintBtn from '../SmallComponents/MintBtn/MintBtn.jsx'
+import bullet from '../../assets/bullet.png'
+import tick from '../../assets/tick.svg'
 
 const Benefits = () => {
 
@@ -52,11 +53,8 @@ const Benefits = () => {
                         }
                     </ul>
                     <div className="benefeits-btns">
-                        <button className="btn">Mint Your Genesis Crate</button>
-                        <button className="eth-btn">
-                            0.1
-                            <img src={ethImg} alt="ethereum" />
-                        </button>
+                        <MintBtn />
+                        <EthBtn />
                     </div>
                 </div>
             </div>

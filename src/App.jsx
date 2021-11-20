@@ -4,6 +4,8 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Concept from './components/Concept/Concept.jsx'
 import Benefits from './components/Benefits/Benefits.jsx'
+import Crate from './components/Crate/Crate.jsx'
+import Timeline from './components/Timeline/Timeline.jsx'
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
             <Hero />
             <Concept />
             <Benefits />
+            <Crate />
+            {/* <Timeline /> */}
           </Route>
           <Route path="/about">
               {/* <About /> */}

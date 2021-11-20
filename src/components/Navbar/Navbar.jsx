@@ -6,7 +6,7 @@ import logo from '../../assets/logo.svg';
 const Navbar = () => {
     
     const [mobileMenu, setmobileMenu] = useState('')
-    const [scroll, setScroll] = useState(false);
+    const [scroll, setScroll] = useState(false)
 
     const links = [
         {
@@ -30,7 +30,7 @@ const Navbar = () => {
         {
             id: 4,
             path:'/contact',
-            text: 'Contact',
+            text: 'Contact Us',
             class: 'btn-nav',
         },
     ]

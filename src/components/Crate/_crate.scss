@@ -1,0 +1,54 @@
+#crate{
+    background: url(../../assets/smoke-background.png);
+    background-size: cover;
+    padding: 10rem 0 7rem;
+
+    & .container{
+        display: flex;
+        align-items: center;
+
+        & > img{
+            width: 45%;
+        }
+
+        & .crate-content{
+            padding-right: 5rem;
+
+            & h2{
+                margin-bottom: 3rem;
+            }
+
+            & > p{
+                font-size: 1.6rem;
+                color: #fff;
+                margin-bottom: 4rem;
+            }
+
+            & .dark-bg{
+                font-weight: 700;
+                position: relative;
+                width: max-content;
+                padding: 2rem 3rem 2rem 0;
+
+                & p{
+                    z-index: 2;
+                    position: relative;
+                    font-size: 1.6rem;
+                    color: #fff;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background: #0D1119;
+                    top: 0;
+                    bottom: 0;
+                    left: -1000rem;
+                    right: 0;
+                    z-index: 1;
+                }
+            }
+        }
+
+    }
+}

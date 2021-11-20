@@ -84,7 +84,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-basis: 57%;
+        flex-basis: 50%;
 
         @media only screen and (max-width:768px){
             flex-direction: column;
@@ -116,9 +116,7 @@
             display: inline-block;
             font-size: 1.6rem;
             color: #fff;
-            font-weight: 400;
             letter-spacing: 1px;
-            transition: color .3s ease;
             font-family: 'Raleway', sans-serif;
             font-weight: 400;
 
@@ -151,7 +149,7 @@
     }
 
     &.active{
-        background: #1e2131;
+        background: #0F141D;
         box-shadow: 0 2px 2rem rgba($color: #000000, $alpha: .5);
         height: 10rem;
     }
