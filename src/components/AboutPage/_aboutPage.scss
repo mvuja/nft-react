@@ -1,8 +1,52 @@
 #about{
-    
 
-    & .container{
+    & > .container{
+        text-align: center;
+        padding-top: 25rem;
+        max-width: 100%;
+        position: relative;
 
+        @media only screen and (max-width: 500px) {
+            padding-bottom: 10rem;
+        }
 
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 95rem;
+            height: 54rem;
+            background: linear-gradient(110deg, #2DC4CE, #435CFE);
+            z-index: -1;
+            clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+
+            @media only screen and (max-width: 500px) {
+                width: 50%;
+                height: 20rem;
+            }
+        }
+
+        & p{
+            font-size: 1.6rem;
+            color: #ABADBF;
+            margin: 3rem auto 10rem;
+            max-width: 130rem;
+
+            @media only screen and (max-width: 500px) {
+                margin-bottom: 0;
+                text-shadow: 0 2px 2px rgba($color: #000000, $alpha: .5);
+            }
+        }
+
+        & > img{
+            width: 100%;
+            margin-bottom: 10rem;
+            max-width: 130rem;
+
+            @media only screen and (max-width: 500px) {
+                display: none;
+            }
+        }
     }
 }

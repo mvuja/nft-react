@@ -47,6 +47,13 @@ const Navbar = () => {
       window.addEventListener("scroll", () => {
         setScroll(window.scrollY > 50);
       });
+
+      const navLinks = document.querySelectorAll('.nav-links li a')
+      navLinks.forEach(el => {
+          el.addEventListener('click', () => {
+            setMobileMenu('')
+          })
+      })
     }, []);
 
 

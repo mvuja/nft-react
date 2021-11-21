@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import './_timeline.scss';
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import { drawSVG } from 'gsap/drawSVG'
 
 const Timeline = () => {
 
+    const svg = useRef()
+    
     useEffect(() => {
-            // ScrollTrigger.create({
-            //   trigger: "#svg",
-            //   scrub: true,
-            //   start: "top 65%",
-            //   // markers: true,
-            //   end: "60% center"
-            // })
+        const line = document.querySelector('.theLine')
+        gsap.timeline({defaults: {duration: 1},
+            ScrollTrigger: {
+              trigger: svg,
+              scrub: true,
+              start: "top 65%",
+              // markers: true,
+              end: "60% center"
+            }})
+          .from(line, {drawSVG: 0}, 0)
           
           
         //   const main2 = gsap.timeline({defaults: {duration: 1},
@@ -59,10 +65,10 @@ const Timeline = () => {
     return (
         <section id="timeline">
 
-            <div class="container">
+            <div className="container">
                 <h2>Superwall Road Map</h2>
 
-                <div class="list list-1">
+                <div className="list list-1">
                     <p>2021 Q3</p>
                     <ul>
                         <li>SuperWall proto-type Development</li>
@@ -71,7 +77,7 @@ const Timeline = () => {
                     </ul>
                 </div>
 
-                <div class="list list-2">
+                <div className="list list-2">
                     <p>2021 Q3</p>
                     <ul>
                         <li>SuperWall proto-type Development</li>
@@ -80,7 +86,7 @@ const Timeline = () => {
                     </ul>
                 </div>
 
-                <div class="list list-3">
+                <div className="list list-3">
                     <p>2021 Q3</p>
                     <ul>
                         <li>SuperWall proto-type Development</li>
@@ -89,7 +95,7 @@ const Timeline = () => {
                     </ul>
                 </div>
 
-                <div class="list list-4">
+                <div className="list list-4">
                     <p>2021 Q3</p>
                     <ul>
                         <li>SuperWall proto-type Development</li>
@@ -98,18 +104,18 @@ const Timeline = () => {
                     </ul>
                 </div>
 
-                <div class="timeline-container">
-                    <svg id="svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200"> 
+                <div className="timeline-container">
+                    <svg ref={svg} xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200"> 
 
                         <defs>
                         <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%"   stop-color="#AD00FF"/>
-                            <stop offset="60%" stop-color="#FF2156"/>
-                            <stop offset="100%" stop-color="#FFD873"/>
+                            <stop offset="0%"   stopColor="#AD00FF"/>
+                            <stop offset="60%" stopColor="#FF2156"/>
+                            <stop offset="100%" stopColor="#FFD873"/>
                         </linearGradient>
                         </defs>
                 
-                        <path class="theLine2" 
+                        <path className="theLine2" 
                         d="M 50,0
                         Q 1000 0 1000 0 
                         T 1000 200
@@ -119,7 +125,7 @@ const Timeline = () => {
                         T 1000 600
                         Q 900 600 900 600" />
 
-                        <path class="theLine" 
+                        <path className="theLine" 
                         d="M 50,0
                         Q 1000 0 1000 0 
                         T 1000 200
@@ -131,7 +137,7 @@ const Timeline = () => {
 
                     </svg>
 
-                    <svg id="svgMD" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200"> 
+                    {/* <svg id="svgMD" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200"> 
 
                         <defs>
                         <linearGradient id="linear2" gradientTransform="rotate(90)" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -141,11 +147,11 @@ const Timeline = () => {
                         </linearGradient>
                         </defs>
                 
-                        <path class="theLineMD2" 
+                        <path className="theLineMD2" 
                         d="M 0,0
                         Q 0 900 0 900" />
 
-                        <path class="theLineMD" 
+                        <path className="theLineMD" 
                         d="M 0,0
                         Q 0 900 0 900" />
 
@@ -161,11 +167,11 @@ const Timeline = () => {
                         </linearGradient>
                         </defs>
                 
-                        <path class="theLineTBL2" 
+                        <path className="theLineTBL2" 
                         d="M 0,0
                         Q 0 800 0 800" />
 
-                        <path class="theLineTBL" 
+                        <path className="theLineTBL" 
                         d="M 0,0
                         Q 0 800 0 800" />
 
@@ -181,11 +187,11 @@ const Timeline = () => {
                         </linearGradient>
                         </defs>
                 
-                        <path class="theLineSM2" 
+                        <path className="theLineSM2" 
                         d="M -45, -45
                         Q -45 700 -45 700" />
 
-                        <path class="theLineSM" 
+                        <path className="theLineSM" 
                         d="M -45, -45
                         Q -45 700 -45 700" />
 
@@ -201,15 +207,15 @@ const Timeline = () => {
                         </linearGradient>
                         </defs>
                 
-                        <path class="theLineXSM2" 
+                        <path className="theLineXSM2" 
                         d="M -55, -50
                         Q -55 1000 -55 1000" />
 
-                        <path class="theLineXSM" 
+                        <path className="theLineXSM" 
                         d="M -55, -50
                         Q -55 1000 -55 1000" />
 
-                    </svg>
+                    </svg> */}
 
                 </div>
             </div>

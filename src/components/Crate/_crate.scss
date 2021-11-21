@@ -23,6 +23,10 @@
         & .crate-content{
             padding-right: 5rem;
 
+            @media only screen and (max-width: 768px) {
+                padding-right: 0;
+            }
+
             & h2{
                 margin-bottom: 3rem;
             }
