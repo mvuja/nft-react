@@ -5,7 +5,12 @@ import Hero from './components/Hero/Hero.jsx'
 import Concept from './components/Concept/Concept.jsx'
 import Benefits from './components/Benefits/Benefits.jsx'
 import Crate from './components/Crate/Crate.jsx'
-import Timeline from './components/Timeline/Timeline.jsx'
+// import Timeline from './components/Timeline/Timeline.jsx'
+import Cards from './components/Cards/Cards.jsx'
+import Footer from './components/Footer/Footer.jsx'
+import CratesPage from './components/CratesPage/CratesPage.jsx'
+import ContactPage from './components/ContactPage/ContactPage.jsx'
+import AboutPage from './components/AboutPage/AboutPage.jsx'
 
 function App() {
   return (
@@ -18,14 +23,24 @@ function App() {
             <Benefits />
             <Crate />
             {/* <Timeline /> */}
+            <Cards />
           </Route>
           <Route path="/about">
-              {/* <About /> */}
+              <AboutPage />
+          </Route>
+          <Route path="/crates">
+              {/* <NotMatch /> */}
+            <CratesPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
+              {/* <NotMatch /> */}
           </Route>
           <Route path="*">
               {/* <NotMatch /> */}
           </Route>
       </Switch>
+      <Footer />
   </>
   );
 }

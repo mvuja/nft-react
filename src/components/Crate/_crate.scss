@@ -7,8 +7,17 @@
         display: flex;
         align-items: center;
 
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         & > img{
             width: 45%;
+
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+                margin-top: 4rem;
+            }
         }
 
         & .crate-content{
@@ -30,6 +39,10 @@
                 width: max-content;
                 padding: 2rem 3rem 2rem 0;
 
+                @media only screen and (max-width: 500px) {
+                    width: 100%;
+                }
+
                 & p{
                     z-index: 2;
                     position: relative;
@@ -46,6 +59,8 @@
                     left: -1000rem;
                     right: 0;
                     z-index: 1;
+
+
                 }
             }
         }

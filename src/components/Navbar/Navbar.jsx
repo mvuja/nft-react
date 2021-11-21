@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {  NavLink } from "react-router-dom"
+import {  Link, NavLink } from "react-router-dom"
 import './_navbar.scss';
 import logo from '../../assets/logo.svg';
 
 const Navbar = () => {
     
-    const [mobileMenu, setmobileMenu] = useState('')
+    const [mobileMenu, setMobileMenu] = useState('')
     const [scroll, setScroll] = useState(false)
 
     const links = [
@@ -23,8 +23,8 @@ const Navbar = () => {
         },
         {
             id: 3,
-            path:'/projects',
-            text: 'Projects',
+            path:'/crates',
+            text: 'Crates',
             class: 'underline',
         },
         {
@@ -37,9 +37,9 @@ const Navbar = () => {
 
     const mobileMenuClick = () => {
         if(!mobileMenu){
-            setmobileMenu('active')
+            setMobileMenu('active')
         }else{
-            setmobileMenu('')
+            setMobileMenu('')
         }
     }
 
@@ -53,7 +53,7 @@ const Navbar = () => {
     return (
         <nav className={`nav-header ${scroll ? 'active' : ''}`}>
             <div className="container">
-                <a href="#"><img className="nav-logo" src={logo} alt="NFT LOGO" /></a>
+                <Link to="/"><img className="nav-logo" src={logo} alt="NFT LOGO" /></Link>
 
                 <div className={`hamburger ${mobileMenu}`} onClick={mobileMenuClick}>
                     <span></span>

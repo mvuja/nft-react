@@ -1,0 +1,125 @@
+#contact{
+    min-height: 100vh;
+
+    & .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 5rem;
+        height: 100%;
+        min-height: 100vh;
+        padding-top: 17rem;
+        padding-bottom: 5rem;
+        
+        @media only screen and (max-width: 1000px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        & img{
+            width: 100%;
+        }
+    
+        & .contact-content {
+
+            & p{
+                color: #ABADBF;
+                font-size: 1.6rem;
+                margin: 3rem 0 4rem;
+            }
+
+            & form{
+                display: grid;
+                gap: 2rem;
+                grid-template-areas: 
+                    "a b"
+                    "c c"
+                    "d d"
+                    "e e"
+                ;
+
+                @media only screen and (max-width: 1000px) {
+                    grid-template-areas: 
+                    "a a"
+                    "b b"
+                    "c c"
+                    "d d"
+                    "e e"
+                ;
+                }
+
+                & input[type="text"],
+                & textarea{
+                    background: transparent;
+                    border: none;
+                    padding: 2rem 0;
+                    border-bottom: 1px solid #282F3D;
+                    color: #fff;
+                }
+
+                & .name{
+                    grid-area: a;
+                }
+                & .last-name{
+                    grid-area: b;
+                }
+                & .subject{
+                    grid-area: c;
+                }
+                & .message{
+                    grid-area: d;
+                    resize: none;
+                }
+                & .form-btn{
+                    grid-area: e;
+                    justify-self: flex-start;
+                    border: none;
+                    cursor: pointer; 
+                    background: var(--secondary-color);
+                    font-size: 1.6rem;
+                    font-weight: 700!important;
+                    color: #fff;
+                    margin-top: 2rem;
+                    padding: 2.3rem 5rem;
+                    position: relative;
+                    transition: background .3s ease;
+                    
+                    &:hover{
+                        background: #020308;
+                    }
+
+                    &:hover::before,
+                    &:hover::after{
+                        width: 3rem;
+                    }
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 2rem;
+                        aspect-ratio: 1 / 1;
+                        border-top: 1px solid #fff;
+                        border-right: 1px solid #fff;
+                        transition: width .3s ease;;
+                    }
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 2rem;
+                        aspect-ratio: 1 / 1;
+                        border-bottom: 1px solid #fff;
+                        border-left: 1px solid #fff;
+                        transition: width .3s ease;
+                    }
+                }
+            }
+        }
+        
+        
+
+    }
+}

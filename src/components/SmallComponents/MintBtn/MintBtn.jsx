@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import {  Link } from "react-router-dom"
 import './_mintBtn.scss';
 
 const MintBtn = () => {
@@ -11,7 +12,7 @@ const MintBtn = () => {
     // }
 
     return (
-        <button className="mint-btn">Mint Your Genesis Crate</button>
+        <Link to="/crates" className="mint-btn">Mint Your Genesis Crate</Link>
     )
 }
 

@@ -1,0 +1,130 @@
+#crates-page{
+    min-height: 100vh;
+
+    & .container{
+        padding-top: 25rem;
+
+        & .hero-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            & p{
+                color: #ABADBF;
+                font-size: 1.6rem;
+                max-width: 70rem;
+                margin: 3rem 0 5rem;
+            }
+
+            & .filter-btns{
+                display: flex;
+                align-items: stretch;
+                border-bottom: 1px solid #373f4f;
+                padding-bottom: 2rem;
+
+                @media only screen and (max-width: 700px) {
+                    overflow: scroll;
+                    width: 100%;
+                }
+
+                & button{
+                    background: transparent;
+                    display: flex;
+                    align-items: center;
+                    font-family: 'Archivo Black', sans-serif;
+                    font-size: 2rem;
+                    color: #fff;
+                    // padding: 1rem 2rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                    border-radius: .5em;
+                    transition: background .3s ease;
+
+                    &:hover,
+                    &.active{
+                        background: #161c29;
+                    }
+
+                    &:not(:last-child){
+                        margin-right: 1.5rem;
+                    }
+
+                    & img{
+                        margin-right: 1.5rem;
+                        padding: .8rem 0;
+                        width: 3.5rem;
+                    }
+                }
+            }
+        }
+
+
+        & .crates{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5rem 2rem;
+            padding: 10rem 0 20rem;
+
+            @media only screen and (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 500px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            & .crate{
+                display: flex;
+                flex-direction: column;
+
+                & img{
+                    width: 100%;
+                }
+
+                & .crate-heading{
+                    color: #fff;
+                    font-size: 2.6rem;
+                    font-family: 'Archivo Black', sans-serif;
+                    margin: 1.8rem 0 .9rem;
+                }
+
+                & .progress-count{
+                    color: #ABADBF;
+                    font-size: 1.6rem;
+                    margin-top: 0.7rem;
+                }
+
+                & .progress-bar{
+                    width: 100%;
+                    height: .8rem;
+                    background: #05080F;
+                    position: relative;
+                    overflow: hidden;
+
+                    & div{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        // width: 45%;
+
+                        &.regular{
+                            background: #2b364b;
+                        }
+                        &.common{
+                            background: #161d2c;
+                        }
+                        &.rare{
+                            background: #99CC5F;
+                        }
+                        &.epic{
+                            background: #435FFD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

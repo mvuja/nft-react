@@ -3,13 +3,28 @@
     clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 87%);
     padding: 15rem 0;
 
+    @media only screen and (max-width: 500px) {
+        clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);
+        padding: 10rem 0;
+    }
+
     & .container{
         display: flex;
         flex-direction: column;
         align-items: center;
 
+        @media only screen and (max-width: 940px) {
+            & > img{
+                width: 100%;
+            }
+        }
+
         & h2{
             margin-bottom: 3rem;
+
+            @media only screen and (max-width: 500px) {
+                margin-bottom: 2rem;
+            }
         }
 
         & p{

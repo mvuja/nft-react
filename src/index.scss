@@ -8,8 +8,8 @@
 }
 
 ::selection{
-  // background: $color-primary;
-  // color: $color-white;
+  background: #435CFE;
+  color: #fff;
 }
 
 *,*::after,*::before{
@@ -35,34 +35,29 @@ display: block;
 
 // SCROLLBAR
 
-/* width */
-// html::-webkit-scrollbar {
-//   width: .5vw;
-// }
+html::-webkit-scrollbar {
+  width: .5vw;
+}
 
-// /* Track */
-// html::-webkit-scrollbar-track {
-//   background: #fff;
-// }
+html::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
 
-// /* Handle */
-// html::-webkit-scrollbar-thumb {
-//   background: $color-primary;
-// }
+html::-webkit-scrollbar-thumb {
+  background: #fff;
+}
 
-// /* Handle on hover */
-// html::-webkit-scrollbar-thumb:hover {
-//   background: $color-secondary;
-// }
+html::-webkit-scrollbar-thumb:hover {
+  background: #dadada;
+}
 
 
 
 html{
   font-size: 62.5%;
-  scroll-behavior: smooth;
   font-family: sans-serif;
   overflow-x: hidden;
-  // scrollbar-color: $color-primary $color-white;
+  scrollbar-color: #fff var(--primary-color);
   scrollbar-width: normal;
 
   @include respond(tab-land){

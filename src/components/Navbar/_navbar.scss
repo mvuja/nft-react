@@ -73,7 +73,7 @@
     }
 
     & .nav-logo{
-        width: 70%;
+        width: 7.5rem;
 
         @media only screen and (max-width: 768px) {
             width: 50%;
@@ -98,7 +98,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: var(--secondary-color);
+            background: #0F141D;
             background-size: cover;
             background-position: center;
             transition: left .4s ease;
@@ -127,30 +127,38 @@
 
         & .underline{
             position: relative;
+
+            &.active::after{
+                transform: scaleX(1);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 1px;
+                bottom: -3px;
+                left: 0;
+                background-color: #fff;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
         }
 
-        & .underline:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 1px;
-            bottom: -3px;
-            left: 0;
-            background-color: #fff;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
+
           
-          & .underline:hover::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-          }
+
     }
 
     &.active{
         background: #0F141D;
-        box-shadow: 0 2px 2rem rgba($color: #000000, $alpha: .5);
+        box-shadow: 0 5px 4rem rgba($color: #000000, $alpha: .5);
         height: 10rem;
     }
 }
