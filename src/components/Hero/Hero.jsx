@@ -2,7 +2,7 @@ import React from "react";
 import './_hero.scss';
 import EthBtn from '../SmallComponents/EthBtn/EthBtn.jsx'
 import MintBtn from '../SmallComponents/MintBtn/MintBtn.jsx'
-import heroImg from '../../assets/hero-image.png';
+import heroImg from '../../assets/hero-image.webp';
 
 const Hero = () => {
 

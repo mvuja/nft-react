@@ -142,7 +142,7 @@ const CratesPage = () => {
                     {
                         cards.filter(card => card.hasOwnProperty(filter)).map(filteredCrate => (
                             <div className="crate" key={filteredCrate.id}>
-                            <img src={filteredCrate.imageSrc} />
+                            <img src={filteredCrate.imageSrc} alt={filteredCrate.text}/>
                             <p className="crate-heading">{filteredCrate.text}</p>
 
                             <div className="progress-bar">

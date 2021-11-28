@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer.jsx'
 import CratesPage from './components/CratesPage/CratesPage.jsx'
 import ContactPage from './components/ContactPage/ContactPage.jsx'
 import AboutPage from './components/AboutPage/AboutPage.jsx'
+import NotMatch from './components/NotMatch/NotMatch.jsx'
 
 function App() {
   return (
@@ -29,15 +30,13 @@ function App() {
               <AboutPage />
           </Route>
           <Route path="/crates">
-              {/* <NotMatch /> */}
             <CratesPage />
           </Route>
           <Route path="/contact">
             <ContactPage />
-              {/* <NotMatch /> */}
           </Route>
           <Route path="*">
-              {/* <NotMatch /> */}
+              <NotMatch />
           </Route>
       </Switch>
       <Footer />

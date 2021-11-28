@@ -1,0 +1,48 @@
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+
+.play-btn{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 550px) {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    &::before{
+        position: absolute;
+        content: "";
+        background: #fff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: play 2s linear infinite;
+        z-index: 1;
+    }
+
+    & img{
+        z-index: 2;
+        position: relative;
+    }
+}
+
+
+@keyframes play {
+    0%{
+        width: 70px;
+        height: 70px;
+    }
+    100%{
+        width: 180px;
+        height: 180px;
+        opacity: 0;
+    }
+}
+
+.modal-video{
+    background-color: rgba(0, 0, 0, 0.94);
+}

@@ -2,7 +2,7 @@ import React from "react";
 import './_benefits.scss';
 import EthBtn from '../SmallComponents/EthBtn/EthBtn.jsx'
 import MintBtn from '../SmallComponents/MintBtn/MintBtn.jsx'
-import bullet from '../../assets/bullet.png'
+import bullet from '../../assets/bullet.webp'
 import tick from '../../assets/tick.svg'
 
 const Benefits = () => {

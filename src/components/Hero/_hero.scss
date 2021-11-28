@@ -16,13 +16,11 @@
         & .hero-img{
             position: absolute;
             top: 0;
-            right: -45rem;
+            right: -50rem;
             z-index: -1;
 
             @media only screen and (max-width: 1000px) {
-                opacity: .1;
-                width: 670px;
-                right: -20rem;
+                display: none;
             }
         }
     } 

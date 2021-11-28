@@ -1,7 +1,9 @@
 #benefits{
-    background: url(../../assets/grid-background.png);
+    background: url(../../assets/grid-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-top: -13rem;
-    padding-top: 20rem;
+    padding-top: 30rem;
     padding-bottom: 10rem;
 
     & .container{

@@ -1,4 +1,7 @@
 #about{
+    background: url(../../assets/about-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     & > .container{
         text-align: center;
@@ -22,8 +25,10 @@
             clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
 
             @media only screen and (max-width: 500px) {
-                width: 50%;
-                height: 20rem;
+                height: 30rem;
+            }
+            @media only screen and (max-width: 380px) {
+                height: 22rem;
             }
         }
 
@@ -31,11 +36,11 @@
             font-size: 1.6rem;
             color: #ABADBF;
             margin: 3rem auto 10rem;
-            max-width: 130rem;
+            max-width: 100rem;
 
+            
             @media only screen and (max-width: 500px) {
-                margin-bottom: 0;
-                text-shadow: 0 2px 2px rgba($color: #000000, $alpha: .5);
+                margin: 3rem auto 5rem;
             }
         }
 
@@ -45,7 +50,7 @@
             max-width: 130rem;
 
             @media only screen and (max-width: 500px) {
-                display: none;
+                margin-bottom: 5rem;
             }
         }
     }

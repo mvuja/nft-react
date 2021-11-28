@@ -1,6 +1,6 @@
 import React from "react";
 import './_aboutPage.scss';
-import plane from '../../assets/about.png';
+import plane from '../../assets/about.webp';
 import Crate from '../Crate/Crate.jsx';
 
 const AboutPage = () => {
