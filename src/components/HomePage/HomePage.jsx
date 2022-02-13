@@ -7,7 +7,7 @@ import Crate from '../Crate/Crate.jsx'
 import Cards from '../Cards/Cards.jsx'
 
 
-const HomePage = () => {
+const HomePage = props => {
     return (
         <>
             <Hero />
@@ -15,7 +15,7 @@ const HomePage = () => {
             <Benefits />
             <Crate />
             {/* <Timeline /> */}
-            <Cards />
+            <Cards newsId={props.newsId} setNewsId={props.setNewsId} />
         </>
     )
 }

@@ -1,0 +1,96 @@
+#news{
+    padding-top: 20rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 70vh;
+        // background: #05080F;
+        background: linear-gradient(to bottom right, #2dc4c3, #435cfe);
+        z-index: -1;
+    }
+    
+    .container{
+        background: #0D1119;
+        padding-top: 10rem;
+        padding-bottom: 20rem;
+        border-radius: 2rem;
+
+        @media only screen and (max-width: 1378px) {
+            border-radius: 0;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding-bottom: 10rem;
+        }
+
+        --width: 80rem;
+
+        .news-img{
+            width: 100%;
+            max-width: var(--width);
+            margin: 0 auto;
+            display: block;
+            border-radius: 2rem;
+            max-height: 50rem;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .news-date{
+            color: rgb(196, 196, 196);
+            width: 100%;
+            max-width: var(--width);
+            margin: 0 auto;
+            font-size: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .news-title{
+            width: 100%;
+            max-width: var(--width);
+            margin: 0 auto;
+            font-size: 3.6rem;
+            margin-top: 3rem;
+
+            @media only screen and (max-width: 600px) {
+                font-size: 3rem;
+            }
+        }
+
+        .news-desc{
+            width: 100%;
+            max-width: var(--width);
+            margin: 0 auto;
+            color: #fff;
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        .news-link{
+            width: 100%;
+            max-width: var(--width);
+            margin: 0 auto;
+            display: block;
+            color: #fff;
+            font-size: 2rem;
+            margin-top: 5rem;
+
+            img{
+                margin-left: .5rem;
+                transition: transform .3s ease;
+            }
+
+            &:hover{
+
+                img{
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
