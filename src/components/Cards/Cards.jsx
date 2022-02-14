@@ -1,31 +1,8 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import './_cards.scss';
-import axios from "axios";
 import {  Link } from "react-router-dom"
 
 const Cards = props => {
-
-    const [articles, setArticles] = useState(null)
-
-    useEffect(() => {
-        const options = {
-            method: 'GET',
-            url: 'https://crypto-news14.p.rapidapi.com/news/coindesk',
-            headers: {
-              'x-rapidapi-host': 'crypto-news14.p.rapidapi.com',
-              'x-rapidapi-key': '155796a2d6msh2bc847140a19d2bp158d70jsne1f52018a883'
-            }
-          };
-          
-        axios.request(options).then(function (response) {
-            // console.log(response.data)
-            setArticles(response.data)
-        }).catch(function (error) {
-            console.error(error)
-        })
-    }, [])
-
-    const firstThreeArticles = articles?.slice(0, 3)
 
     return (
         <section id="cards">
@@ -50,8 +27,8 @@ const Cards = props => {
                         <p className="card-body">High entry fee, high reward.</p>
                     </div> */}
                     {
-                        firstThreeArticles?.map((el, id) => (
-                            <Link to={`news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`} key={id} className="card" onClick={() => props.setNewsId(el)}>
+                        props.firstThreeArticles?.map((el, id) => (
+                            <Link to={`news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`} key={id} className="card">
                                 <div className="img-wrapper">
                                 <img src={el.image} alt={el.title} />
                                 </div>

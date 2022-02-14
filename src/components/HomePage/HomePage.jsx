@@ -15,7 +15,7 @@ const HomePage = props => {
             <Benefits />
             <Crate />
             {/* <Timeline /> */}
-            <Cards newsId={props.newsId} setNewsId={props.setNewsId} />
+            <Cards firstThreeArticles={props.firstThreeArticles} />
         </>
     )
 }
