@@ -2,26 +2,18 @@ import { React, useEffect, useState } from "react";
 import './_news.scss';
 import arrow from '../../assets/arrow.svg'
 
+import PacmanLoader from "react-spinners/PacmanLoader";
+import { css } from "@emotion/react";
 
+const override = css`
+    display: block;
+    margin: 0 auto;
+`;
+
+const color = '#fff'
 
 const News = props => {
     return (
-
-        // <section id="news">
-        //     {Object.keys(props.newsId).length !== 0 ?
-        //         <div className="container">
-        //             <img className="news-img" src={props.newsId.image} alt={props.newsId.title} />
-        //             <p className="news-date">{props.newsId.date}</p>
-        //             <h2 className="news-title">{props.newsId.title}</h2>
-        //             <p className="news-desc">{props.newsId.desc}</p>
-        //             <a className="news-link" href={`https://www.coindesk.com${props.newsId.url}`} target="_blank">See more <img src={arrow} alt="arrow" /></a>
-        //         </div>
-        //     :
-        //     <div className="container container-error">
-        //         <h1>404 - PAGE NOT FOUND</h1>
-        //     </div>
-        //     }
-        // </section>
 
         <section id="news">
             {props.el ?
@@ -33,11 +25,11 @@ const News = props => {
                 <a className="news-link" href={`https://www.coindesk.com${props.el.url}`} target="_blank">See more <img src={arrow} alt="arrow" /></a>
             </div>
             :
-            <div>djes</div>
+            <div className="container container-loader">
+                <PacmanLoader color={color} css={override} size={40} />
+            </div>
             }
         </section>
-
-
 
     )
 }
