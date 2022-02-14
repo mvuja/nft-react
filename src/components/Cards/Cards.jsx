@@ -51,7 +51,7 @@ const Cards = props => {
                     </div> */}
                     {
                         firstThreeArticles?.map((el, id) => (
-                            <Link to={`news/${el.title.replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '')}`} key={id} className="card" onClick={() => props.setNewsId(el)}>
+                            <Link to={`news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`} key={id} className="card" onClick={() => props.setNewsId(el)}>
                                 <div className="img-wrapper">
                                 <img src={el.image} alt={el.title} />
                                 </div>

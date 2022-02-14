@@ -1,14 +1,14 @@
 #cards{
     padding: 10rem 0;
 
-    & .container{
+    .container{
         text-align: center;
 
         & > h2{
             margin: 0 0 8rem;
         }
 
-        & .cards{
+        .cards{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 6rem;
@@ -21,7 +21,7 @@
                 grid-template-columns: repeat(1, 1fr);
             }
 
-            & .card{
+            .card{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -29,6 +29,12 @@
                 border-radius: 1em;
                 background: #05080F;
                 padding-bottom: 4rem;
+                transition: transform .25s, box-shadow .25s;
+
+                &:hover{
+                    transform: scale(0.95);
+                    box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: .5);
+                }
 
                 .img-wrapper{
                     max-height: 25rem;
@@ -40,7 +46,7 @@
                     }
                 }
 
-                & .card-heading{
+                .card-heading{
                     color: #fff;
                     font-size: 1.8rem;
                     line-height: 1.5;
@@ -54,7 +60,7 @@
                     padding: 0 3rem;
                 }
 
-                & .card-body{
+                .card-body{
                     color: #fff;
                     font-size: 1.6rem;
                     display: -webkit-box;
@@ -63,23 +69,23 @@
                     overflow: hidden;
                     padding: 0 3rem;
                 }
-            }
 
-            & .card1{
-                background: url(../../assets/box-1.webp);
-                background-size: cover;
-            }
-            & .card2{
-                background: url(../../assets/box-2.webp);
-                background-size: cover;
-            }
-            & .card3{
-                background: url(../../assets/box-3.webp);
-                background-size: cover;
-            }
-            & .card4{
-                background: url(../../assets/box-4.webp);
-                background-size: cover;
+                // &.card1{
+                //     background: url(../../assets/box-1.webp);
+                //     background-size: cover;
+                // }
+                // &.card2{
+                //     background: url(../../assets/box-2.webp);
+                //     background-size: cover;
+                // }
+                // &.card3{
+                //     background: url(../../assets/box-3.webp);
+                //     background-size: cover;
+                // }
+                // &.card4{
+                //     background: url(../../assets/box-4.webp);
+                //     background-size: cover;
+                // }
             }
         }
     }
