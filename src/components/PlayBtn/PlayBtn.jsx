@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './_play-btn.scss';
 import ModalVideo from 'react-modal-video'
 import playBtn from '../../assets/play-btn.svg'

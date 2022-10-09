@@ -20,17 +20,16 @@ function App() {
 
   useEffect(() => {
       const options = {
-          method: 'GET',
-          url: 'https://crypto-news14.p.rapidapi.com/news/coindesk',
-          headers: {
-            'x-rapidapi-host': 'crypto-news14.p.rapidapi.com',
-            'x-rapidapi-key': '155796a2d6msh2bc847140a19d2bp158d70jsne1f52018a883'
-          }
+        method: 'GET',
+        url: 'https://crypto-news14.p.rapidapi.com/news/cointelegraph',
+        headers: {
+          'X-RapidAPI-Key': 'd24265ecc8msh1bac037784ae606p1e9c97jsn2046b3c50b91',
+          'X-RapidAPI-Host': 'crypto-news14.p.rapidapi.com'
+        }
         };
         
         trackPromise(
           axios.request(options).then(function (response) {
-            // console.log(response.data)
             setArticles(response.data)
           }).catch(function (error) {
               console.error(error)

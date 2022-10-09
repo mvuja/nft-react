@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import './_news.scss';
 import arrow from '../../assets/arrow.svg'
 
@@ -19,10 +19,10 @@ const News = props => {
             {props.el ?
             <div className="container">
                 <img className="news-img" src={props.el.image} alt={props.el.title} />
-                <p className="news-date">{props.el.date}</p>
+                <p className="news-date">{new Date(props.el.date).toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}</p>
                 <h2 className="news-title">{props.el.title}</h2>
                 <p className="news-desc">{props.el.desc}</p>
-                <a className="news-link" href={`https://www.coindesk.com${props.el.url}`} target="_blank">See more <img src={arrow} alt="arrow" /></a>
+                <a className="news-link" rel="noreferrer" href={`${props.el.url}`} target="_blank">See more <img src={arrow} alt="arrow" /></a>
             </div>
             :
             <div className="container container-loader">
