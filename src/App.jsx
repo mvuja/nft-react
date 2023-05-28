@@ -20,19 +20,21 @@ function App() {
 
   useEffect(() => {
       const options = {
-        method: 'GET',
-        url: 'https://crypto-news14.p.rapidapi.com/news/cointelegraph',
-        headers: {
-          'X-RapidAPI-Key': 'd24265ecc8msh1bac037784ae606p1e9c97jsn2046b3c50b91',
-          'X-RapidAPI-Host': 'crypto-news14.p.rapidapi.com'
-        }
+          method: 'GET',
+          url: 'https://yahoo-finance127.p.rapidapi.com/news/tsla',
+          headers: {
+            'X-RapidAPI-Key': 'd24265ecc8msh1bac037784ae606p1e9c97jsn2046b3c50b91',
+            'X-RapidAPI-Host': 'yahoo-finance127.p.rapidapi.com'
+          }
         };
         
         trackPromise(
           axios.request(options).then(function (response) {
-            setArticles(response.data)
+            setArticles(Object.values(response.data))
+            console.log(response.data, 'lol')
           }).catch(function (error) {
               console.error(error)
+              console.log(error, 'lol')
           })
         )
 
@@ -52,7 +54,7 @@ function App() {
       <Navbar />
       <Switch>
           <Route exact path="/">
-            <HomePage firstThreeArticles={firstThreeArticles} />
+            <HomePage firstThreeArticles={firstThreeArticles} promiseInProgress={promiseInProgress} />
           </Route>
           <Route path="/about" component={AboutPage} />
           <Route path="/crates" component={CratesPage}/>
@@ -66,8 +68,8 @@ function App() {
                 <NewsPage/>
               </Route>
             :
-            firstThreeArticles?.map((el, id) => (
-              <Route key={id} path={`/news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`}>
+            firstThreeArticles?.map((el) => (
+              <Route key={el.uuid} path={`/news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`}>
                 <NewsPage el={el} />
               </Route>
             ))

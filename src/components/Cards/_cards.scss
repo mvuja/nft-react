@@ -37,11 +37,12 @@
                 }
 
                 .img-wrapper{
-                    max-height: 25rem;
                     overflow: hidden;
+                    width: 100%;
 
                     img{
                         width: 100%;
+                        aspect-ratio: 16 / 9;
                         object-fit: cover;
                     }
                 }

@@ -12,17 +12,17 @@ const override = css`
 
 const color = '#fff'
 
-const News = props => {
+const News = ({el}) => {
     return (
 
         <section id="news">
-            {props.el ?
+            {el ?
             <div className="container">
-                <img className="news-img" src={props.el.image} alt={props.el.title} />
-                <p className="news-date">{new Date(props.el.date).toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}</p>
-                <h2 className="news-title">{props.el.title}</h2>
-                <p className="news-desc">{props.el.desc}</p>
-                <a className="news-link" rel="noreferrer" href={`${props.el.url}`} target="_blank">See more <img src={arrow} alt="arrow" /></a>
+                <img className="news-img" src={el.thumbnail.resolutions[0].url} alt={el.title} />
+                {/* <p className="news-date">{new Date(el.date).toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}</p> */}
+                <h2 className="news-title">{el.title}</h2>
+                {/* <p className="news-desc">{el.desc}</p> */}
+                <a className="news-link" rel="noreferrer" href={el.link} target="_blank">See more <img src={arrow} alt="arrow" /></a>
             </div>
             :
             <div className="container container-loader">
