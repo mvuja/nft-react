@@ -18,7 +18,7 @@ const News = ({el}) => {
         <section id="news">
             {el ?
             <div className="container">
-                <img className="news-img" src={el.thumbnail.resolutions[0].url} alt={el.title} />
+                <img className="news-img" src={el.thumbnail?.resolutions[0].url} alt={el.title} />
                 {/* <p className="news-date">{new Date(el.date).toLocaleDateString('en-us', {year:"numeric", month:"short", day:"numeric"})}</p> */}
                 <h2 className="news-title">{el.title}</h2>
                 {/* <p className="news-desc">{el.desc}</p> */}

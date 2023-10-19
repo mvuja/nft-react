@@ -15,7 +15,7 @@ const color = '#fff'
 const Cards = ({firstThreeArticles, promiseInProgress}) => {
 
     useEffect(() => {
-        console.log(promiseInProgress)
+        console.log(firstThreeArticles)
     })
 
     return (
@@ -31,7 +31,7 @@ const Cards = ({firstThreeArticles, promiseInProgress}) => {
                                 firstThreeArticles?.map((el, id) => (
                                     <Link to={`news/${el.title.replace(/\s+/g, '-').replace(/[&\/\\#, +()$~%.'":*?<>{}]/g, '').toLowerCase()}`} key={id} className="card">
                                         <div className="img-wrapper">
-                                        <img src={el.thumbnail.resolutions[0].url} alt={el.title} />
+                                        <img src={el.thumbnail?.resolutions[0].url} alt={el.title} />
                                         </div>
                                         <p className="card-heading">{el.title}</p>
                                         {/* <p className="card-body">{el.desc}</p> */}
